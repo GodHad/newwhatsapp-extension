@@ -301,10 +301,10 @@ function getDevUrl() {
     return 'http://localhost:8080/lib/get?dev=ok'
 }
 
-chrome.runtime.onMessage.addListener((message) => {
-    if (message.type === 'wacore_new_update') {
-        window.postMessage({ type: '_wacore_new_update_' }, '*');
-    }
-});
+// chrome.runtime.onMessage.addListener((message) => {
+//     if (message.type === 'wacore_new_update') {
+//         window.postMessage({ type: '_wacore_new_update_' }, '*');
+//     }
+// });
 
 initialize();

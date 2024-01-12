@@ -83,7 +83,6 @@
       "resources": [
         "eventListener.js",
         "assets/js/jquery.min.js",
-        "assets/js/bootstrap.bundle.min.js",
         "assets/js/sweetAlert.js",
         "assets/js/dragula.js",
         "assets/js/dom-autoscroller.js",
