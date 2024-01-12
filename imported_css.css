@@ -447,8 +447,6 @@
     display: flex;
     top: var(--toolbar-height);
     top: calc(var(--toolbar-height));
-    /* bottom: var(--toolbar-height); */
-    height: calc(var(--app-height) + 1px);
     overflow: visible;
   }
   

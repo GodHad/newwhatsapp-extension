@@ -1544,6 +1544,7 @@ button:disabled {
 .bg-mw-sidebar {
   background: var(--background-default);
   color: #fff;
+  display: none!important;
 }
 
 .shadow {
@@ -4775,6 +4776,11 @@ input:checked + .slider:before {
 .calendar-sidebar > .month-list > .calendar-months > li:hover {
   background-color: #a692e0;
 }
+
+#app {
+  width: 100% !important;
+}
+
 
 .calendar-sidebar > .month-list > .calendar-months > li.active-month {
   background-color: #755eb5;

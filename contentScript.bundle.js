@@ -83466,6 +83466,8 @@ object-assign
 
                                   // Replace the content of the button with the new image
                                   button.innerHTML = ""; // Remove existing content
+    
+                                  button.setAttribute('onclick', "document.getElementById('screen').style.display='none'; document.getElementsByClassName('modoCRMBtn')[0].className = document.getElementsByClassName('modoCRMBtn')[0].className.replace('ant-btn-primary', '')");
                                   button.appendChild(newImageElement);
                                 }
 
@@ -83489,7 +83491,6 @@ object-assign
                                   Math.min(allButtons.length, images.length);
                                   i++
                                 ) {
-                                  console.log("Script is running");
                                   replaceButtonContent(
                                     allButtons[i],
                                     i,

@@ -2,6 +2,7 @@ let isAlreadyAdded = false;
 
 window.addEventListener("elementCreated", (event) => {
   // This is for adding button.
+  if(document.getElementsByClassName('closeBBB').length > 0) document.getElementsByClassName('closeBBB')[0].className += ' ant-btn ant-btn-circle ant-btn-default ant-btn-sm ant-btn-icon-only ';
   if (event.detail.length && !isAlreadyAdded) {
     isAlreadyAdded = true;
 
@@ -10,12 +11,12 @@ window.addEventListener("elementCreated", (event) => {
     newButtonContainer.id = "v-pills-crm-tab";
     newButtonContainer.dataset.translateKey = "crmMode";
     newButtonContainer.title = "Modo CRM";
-    newButtonContainer.setAttribute("onclick", "window.wacore.crm.opencrm()");
+    newButtonContainer.setAttribute("onclick", "window.wacore.crm.opencrm(); document.getElementsByClassName('ant-btn-primary')[0].className = document.getElementsByClassName('ant-btn-primary')[0].className.replace(' ant-btn-primary', ''); document.getElementsByClassName('modoCRMBtn')[0].className += ' ant-btn-primary';");
     newButtonContainer.dataset.title = "crm";
     newButtonContainer.style.display = "block";
 
     const button = document.createElement("button");
-    button.className = "btn- ant-btn ant-btn-circle ant-btn-default ant-btn-lg ant-btn-icon-only d-flex align-items-center justify-content-center";
+    button.className = "ant-btn ant-btn-circle ant-btn-default ant-btn-lg ant-btn-icon-only d-flex align-items-center justify-content-center modoCRMBtn";
 
 
     // Create an image element
@@ -44,6 +45,5 @@ window.addEventListener("elementCreated", (event) => {
     const mainContentDom = document.querySelectorAll("._1jJ70")[0];
     mainContentDom.appendChild(newDivComponentForButton)
 
-   
   }
 });
